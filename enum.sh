@@ -87,7 +87,7 @@ echo 'dnsgen + massdns found ' $(wc -l ~/$1/$1.resolved.txt) 'resolvable domains
 
 echo 'Scanning all resolvable addresses with nmap'
 #nmap -iL ~/$1/$1.resolved.txt -F -T4 -oA ~/$1/$1.nmap
-proxychains4 nmap -iL ~/$1/$1.resolved.txt -p80 -oA ~/$1/$1.nmap
+nmap -iL ~/$1/$1.resolved.txt -p80 -oA ~/$1/$1.nmap
 
 echo 'Converting nmap results with https://github.com/lkorba/nparser.git'
 ~/tools/nparser.py ~/$1/$1.nmap.xml > ~/$1/$1.http.txt
