@@ -93,7 +93,7 @@ echo 'Converting nmap results with https://github.com/lkorba/nparser.git'
 ~/tools/nparser.py ~/$1/$1.nmap.xml > ~/$1/$1.http.txt
 
 echo 'Making httpscreenshot on the nmap results:'
-#~/tools/httpscreenshot/httpscreenshot.py -i ~/$1/$1.nmap.gnmap -p -w 1 -a -vH -r 2
+~/tools/httpscreenshot/httpscreenshot.py -i ~/$1/$1.nmap.gnmap -p -w 1 -a -vH -r 2
 #while read -r line; do echo “Processing $line”; google-chrome --headless --disable-gpu --screenshot=$line.png http://$line; done < ~/$1/$1.http.txt
 
 
